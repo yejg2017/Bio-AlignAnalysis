@@ -1,4 +1,4 @@
-首先安装软件
+* 1 首先安装软件
 安装conda，使用清华镜像的conda，说明书地址：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 
 下载并安装miniconda，地址：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 
