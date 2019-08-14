@@ -14,11 +14,13 @@ conda config --set show_channel_urls yes
 ```
 
 * 3. 然后就可以根据流程来使用conda安装一系列软件
-
+```shell
 conda  create -n wes  python=2 bwa
 conda info --envs
 source activate wes
-# 下载安装软件之前先搜索该软件名是否正确，地址：https://bioconda.github.io/recipes.html可以用search先进行检索
+```
+* 4. 下载安装软件之前先搜索该软件名是否正确，地址：https://bioconda.github.io/recipes.html可以用search先进行检索
+```shell
 conda search sratools
 # 保证所有的软件都是安装在 wes 这个环境下面
 conda install sra-tools
@@ -32,8 +34,9 @@ cd ~/biosoft
 mkdir -p gatk4 &&  cd gatk4
 wget  https://github.com/broadinstitute/gatk/releases/download/4.0.6.0/gatk-4.0.6.0.zip
 unzip gatk-4.0.6.0.zip
-# 然后下载100G的必备数据才能使用GATK
-熟悉参考基因组及必备数据库
+```
+* 5. 然后下载100G的必备数据才能使用GATK,熟悉参考基因组及必备数据库
+```shell
 /public/biosoft/GATK/resources/bundle/hg38/bwa_index/
 |-- [ 20K]  gatk_hg38.amb
 |-- [445K]  gatk_hg38.ann
@@ -55,15 +58,16 @@ unzip gatk-4.0.6.0.zip
 |-- [157K]  Homo_sapiens_assembly38.fasta.fai
 |-- [ 20M]  Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
 |-- [1.4M]  Mills_and_1000G_gold_standard.indels.hg38.vcf.gz.tbi
-第一步是QC
+```
+* 6. 第一步是QC
 包括使用fasqc和multiqc两个软件查看测序质量，以及使用trim_galore软件进行过滤低质量reads和去除接头。
-
+```shell
 mkdir ~/project/boy
 wkd=/home/jmzeng/project/boy
 mkdir {raw,clean,qc,align,mutation}
 cd qc 
 find /public/project/clinical/beijing_boy  -name *gz |grep -v '\._'|xargs fastqc -t 10 -o ./
-假设质量很差，就过滤：
+#假设质量很差，就过滤：
 
 ### step3: filter the bad quality reads and remove adaptors. 
 mkdir $wkd/clean 
@@ -89,7 +93,7 @@ done
 source deactivate
 读质量较好的测序数据进行比对
 先走测试数据
-
+```
 ## 先提取小的fq
 source activate wes
 find /public/project/clinical/beijing_boy  -name *gz |grep -v '\._' > fq.txt
