@@ -94,7 +94,7 @@ source deactivate
 读质量较好的测序数据进行比对
 先走测试数据
 ```
-* 7.先提取小的fq
+* 7. 先提取小的fq
 ```shell
 source activate wes
 find /public/project/clinical/beijing_boy  -name *gz |grep -v '\._' > fq.txt
@@ -212,7 +212,7 @@ $GATK --java-options "-Xmx20G -Djava.io.tmpdir=./" HaplotypeCaller \
 done 
 ```
 
-* 10.检查感兴趣基因区域内比对和找变异情况,通过IGV可视化来加深自己对这个流程的把握和理解
+* 10. 检查感兴趣基因区域内比对和找变异情况,通过IGV可视化来加深自己对这个流程的把握和理解
 ```shell
 chr17   HAVANA  gene    43044295        43170245
 3.5G Jul 21 18:01 7E5240.bam
@@ -248,7 +248,7 @@ raw和clean的fastq文件都需要使用fastqc质控。
 
 比对的各个阶段的bam文件都可以质控。
 
-* 11.使用qualimap对wes的比对bam文件总结测序深度及覆盖度。
+* 11. 使用qualimap对wes的比对bam文件总结测序深度及覆盖度。
 ```shell
 source activate wes
 wkd=/home/jmzeng/project/boy
@@ -337,4 +337,5 @@ cd $wkd/mutation
 使用 GATK的 Joint Calling过滤
 
 通过搜索我们找到了gatk3代码：http://baserecalibrator1.rssing.com/chan-10751514/all_p13.html，但事实上这样的教程过时了，可以抛弃
+
 谢谢生信技能树：https://mp.weixin.qq.com/s/y6NB8CPH73QGb17OsU9xPQ
