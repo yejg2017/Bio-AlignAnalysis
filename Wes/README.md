@@ -94,7 +94,8 @@ source deactivate
 读质量较好的测序数据进行比对
 先走测试数据
 ```
-## 先提取小的fq
+* 7.先提取小的fq
+```shell
 source activate wes
 find /public/project/clinical/beijing_boy  -name *gz |grep -v '\._' > fq.txt
 cat fq.txt |while read id ;do (zcat $id|head -10000 > $(basename $id ".gz"));done
@@ -120,6 +121,7 @@ sample=${arr[0]}
 bwa mem -t 5 -R "@RG\tID:$sample\tSM:$sample\tLB:WGS\tPL:Illumina" $INDEX $fq1 $fq2  | samtools sort -@ 5 -o $sample.bam - 
 
 done 
+
 然后走正常的数据
 
 ls /home/jmzeng/project/boy/clean/*1.fq.gz >1
@@ -139,19 +141,23 @@ echo $sample $fq1 $fq2
  bwa mem -t 5 -R "@RG\tID:$sample\tSM:$sample\tLB:WGS\tPL:Illumina" $INDEX $fq1 $fq2  | samtools sort -@ 5 -o $sample.bam -   
 
 done 
-最简单的找变异流程
+```
+* 8. 最简单的找变异流程
 如果要理解参数的意思，参考我的直播基因组 【直播】我的基因组25：用bcftools来call variation
-
+```shell
 ref=/public/biosoft/GATK/resources/bundle/hg38/Homo_sapiens_assembly38.fasta
 source activate wes
 time samtools mpileup -ugf $ref  *.bam | bcftools call -vmO z -o out.vcf.gz
 ls *.bam |xargs -i samtools index {}
-# 没有去除PCR重复
+```
+
+* 9. 没有去除PCR重复
 去除PCR重复
 下面的代码不能运行，但是你需要理解，理解参数和教程为什么会过时
+```shell
+samtools markdup -r 7E5241.bam 7E5241.rm.bam
+samtools markdup -S 7E5241.bam 7E5241.mk.bam
 
-# samtools markdup -r 7E5241.bam 7E5241.rm.bam
-# samtools markdup -S 7E5241.bam 7E5241.mk.bam
 完善的GATK流程
 source activate wes
 GATK=/home/jmzeng/biosoft/gatk4/gatk-4.0.6.0/gatk
@@ -204,23 +210,26 @@ $GATK --java-options "-Xmx20G -Djava.io.tmpdir=./" HaplotypeCaller \
       1>${sample}_log.HC 2>&1  
 
 done 
-检查感兴趣基因区域内比对和找变异情况
-通过IGV可视化来加深自己对这个流程的把握和理解。
+```
 
+* 10.检查感兴趣基因区域内比对和找变异情况,通过IGV可视化来加深自己对这个流程的把握和理解
+```shell
 chr17   HAVANA  gene    43044295        43170245
 3.5G Jul 21 18:01 7E5240.bam
 7.1G Jul 21 21:40 7E5240_bqsr.bam
 4.7G Jul 21 20:28 7E5240_marked.bam
 4.8G Jul 21 20:44 7E5240_marked_fixed.bam
+```
 把这些bam里面的BRCA1基因的reads拿出来：
-
+```shell
 samtools  view -h  7E5240.bam chr17:43044295-43170245 |samtools sort -o  7E5240.brca1.bam -
 samtools  view -h  7E5240_bqsr.bam chr17:43044295-43170245 |samtools sort -o  7E5240_bqsr.brca1.bam -
 samtools  view -h  7E5240_marked.bam chr17:43044295-43170245 |samtools sort -o  7E5240_marked.brca1.bam -
 samtools  view -h  7E5240_marked_fixed.bam chr17:43044295-43170245 |samtools sort -o  7E5240_marked_fixed.brca1.bam -
 ls  *brca1.bam|xargs -i samtools index {}
+```
 有了这些特定基因区域的bam，就可以针对特定基因找变异
-
+```shell
 source activate wes
 ref=/public/biosoft/GATK/resources/bundle/hg38/Homo_sapiens_assembly38.fasta
 samtools mpileup -ugf $ref   7E5240_bqsr.brca1.bam   | bcftools call -vmO z -o 7E5240_bqsr.vcf.gz
@@ -233,13 +242,14 @@ cd $wkd/align
 ls  *_bqsr.bam  |xargs -i samtools index {}
 ref=/public/biosoft/GATK/resources/bundle/hg38/Homo_sapiens_assembly38.fasta
 nohup samtools mpileup -ugf $ref   *_bqsr.bam | bcftools call -vmO z -o all_bqsr.vcf.gz & 
+```
 比对及找变异结果的质控
 raw和clean的fastq文件都需要使用fastqc质控。
 
 比对的各个阶段的bam文件都可以质控。
 
-使用qualimap对wes的比对bam文件总结测序深度及覆盖度。
-
+* 11.使用qualimap对wes的比对bam文件总结测序深度及覆盖度。
+```shell
 source activate wes
 wkd=/home/jmzeng/project/boy
 cd $wkd/clean
@@ -272,6 +282,8 @@ GT:PL   0/1:198,0,255   0/1:176,0,255   0/1:50,0,158
 chr1    139213  rs370723703 A   G   3945.77 .   AC=1;AF=0.500;AN=2;BaseQRankSum=-2.999;ClippingRankSum=0.000;DB;DP=244;ExcessHet=3.0103;FS=2.256;MLEAC=1;MLEAF=0.500;MQ=29.33;MQRankSum=-0.929;QD=16.17;ReadPosRankSum=1.462;SOR=0.863  GT:AD:DP:GQ:PL  0/1:136,108:244:99:3974,0,6459
 chr1    139213  rs370723703 A   G   2261.77 .   AC=1;AF=0.500;AN=2;BaseQRankSum=-1.191;ClippingRankSum=0.000;DB;DP=192;ExcessHet=3.0103;FS=9.094;MLEAC=1;MLEAF=0.500;MQ=32.03;MQRankSum=-0.533;QD=11.78;ReadPosRankSum=0.916;SOR=0.321  GT:AD:DP:GQ:PL  0/1:126,66:192:99:2290,0,7128
 chr1    139213  rs370723703 A   G   2445.77 .   AC=1;AF=0.500;AN=2;BaseQRankSum=-2.495;ClippingRankSum=0.000;DB;DP=223;ExcessHet=3.0103;FS=10.346;MLEAC=1;MLEAF=0.500;MQ=30.18;MQRankSum=0.486;QD=10.97;ReadPosRankSum=-0.808;SOR=0.300 GT:AD:DP:GQ:PL  0/1:152,71:223:99:2474,0,7901
+```
+
 补充作业
 使用freebayes和varscan找变异。
 
@@ -289,6 +301,7 @@ VCF下游分析
 
 4.WES（六）用annovar注释
 
+```shell
 cd ~/biosoft/
 ln -s /public/biosoft/ANNOVAR/ ANNOVAR
 source activate wes
@@ -303,6 +316,8 @@ cd $wkd/mutation
 --outfile 7E5240.anno \
 7E5240.annovar \
 ~/biosoft/ANNOVAR/annovar/humandb/
+```
+
 其实并不一定需要vcf文件，软件需要的只是染色体加上坐标即可，对于我们的vcf格式的变异文件， 软件通常会进行一定程度的格式化之后再进行注释。这里的注释主要有三种方式，分别是：
 
 基于基因的注释,exonic,splicing,ncRNA,UTR5,UTR3,intronic,upstream,downstream,intergenic
@@ -322,3 +337,4 @@ cd $wkd/mutation
 使用 GATK的 Joint Calling过滤
 
 通过搜索我们找到了gatk3代码：http://baserecalibrator1.rssing.com/chan-10751514/all_p13.html，但事实上这样的教程过时了，可以抛弃
+谢谢生信技能树：https://mp.weixin.qq.com/s/y6NB8CPH73QGb17OsU9xPQ
