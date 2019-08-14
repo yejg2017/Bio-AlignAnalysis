@@ -1,16 +1,19 @@
-* 1 首先安装软件
+* 1. 首先安装软件
+
 安装conda，使用清华镜像的conda，说明书地址：https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
 
 下载并安装miniconda，地址：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/ 
 
-更改镜像配置
-
+* 2. 更改镜像配置
+```shell
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
 conda config --set show_channel_urls yes
-   4. 然后就可以根据流程来使用conda安装一系列软件
+```
+
+* 3. 然后就可以根据流程来使用conda安装一系列软件
 
 conda  create -n wes  python=2 bwa
 conda info --envs
