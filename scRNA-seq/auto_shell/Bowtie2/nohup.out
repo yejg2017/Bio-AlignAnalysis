@@ -1,0 +1,274 @@
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B1-1_L2_A007.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B1-1_L2_A007.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B1-1_L2_A007/Align.out.sam
+25823555 reads; of these:
+  25823555 (100.00%) were paired; of these:
+    9697561 (37.55%) aligned concordantly 0 times
+    11508280 (44.57%) aligned concordantly exactly 1 time
+    4617714 (17.88%) aligned concordantly >1 times
+    ----
+    9697561 pairs aligned concordantly 0 times; of these:
+      1457994 (15.03%) aligned discordantly 1 time
+    ----
+    8239567 pairs aligned 0 times concordantly or discordantly; of these:
+      16479134 mates make up the pairs; of these:
+        11387589 (69.10%) aligned 0 times
+        3958673 (24.02%) aligned exactly 1 time
+        1132872 (6.87%) aligned >1 times
+77.95% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B1_L2_A001.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B1_L2_A001.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B1_L2_A001/Align.out.sam
+18861013 reads; of these:
+  18861013 (100.00%) were paired; of these:
+    7312230 (38.77%) aligned concordantly 0 times
+    8263585 (43.81%) aligned concordantly exactly 1 time
+    3285198 (17.42%) aligned concordantly >1 times
+    ----
+    7312230 pairs aligned concordantly 0 times; of these:
+      973671 (13.32%) aligned discordantly 1 time
+    ----
+    6338559 pairs aligned 0 times concordantly or discordantly; of these:
+      12677118 mates make up the pairs; of these:
+        9014810 (71.11%) aligned 0 times
+        2895604 (22.84%) aligned exactly 1 time
+        766704 (6.05%) aligned >1 times
+76.10% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B2-1_L2_A003.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B2-1_L2_A003.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B2-1_L2_A003/Align.out.sam
+23402576 reads; of these:
+  23402576 (100.00%) were paired; of these:
+    8871247 (37.91%) aligned concordantly 0 times
+    10726556 (45.83%) aligned concordantly exactly 1 time
+    3804773 (16.26%) aligned concordantly >1 times
+    ----
+    8871247 pairs aligned concordantly 0 times; of these:
+      1417342 (15.98%) aligned discordantly 1 time
+    ----
+    7453905 pairs aligned 0 times concordantly or discordantly; of these:
+      14907810 mates make up the pairs; of these:
+        10169178 (68.21%) aligned 0 times
+        3813770 (25.58%) aligned exactly 1 time
+        924862 (6.20%) aligned >1 times
+78.27% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B2_L4_A003.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B2_L4_A003.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B2_L4_A003/Align.out.sam
+[mpileup] 1 samples in 1 input files
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+24434087 reads; of these:
+  24434087 (100.00%) were paired; of these:
+    9666240 (39.56%) aligned concordantly 0 times
+    10793150 (44.17%) aligned concordantly exactly 1 time
+    3974697 (16.27%) aligned concordantly >1 times
+    ----
+    9666240 pairs aligned concordantly 0 times; of these:
+      2158233 (22.33%) aligned discordantly 1 time
+    ----
+    7508007 pairs aligned 0 times concordantly or discordantly; of these:
+      15016014 mates make up the pairs; of these:
+        10860640 (72.33%) aligned 0 times
+        2565609 (17.09%) aligned exactly 1 time
+        1589765 (10.59%) aligned >1 times
+77.78% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B3-1_L2_A006.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B3-1_L2_A006.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B3-1_L2_A006/Align.out.sam
+25297570 reads; of these:
+  25297570 (100.00%) were paired; of these:
+    10194840 (40.30%) aligned concordantly 0 times
+    11183773 (44.21%) aligned concordantly exactly 1 time
+    3918957 (15.49%) aligned concordantly >1 times
+    ----
+    10194840 pairs aligned concordantly 0 times; of these:
+      1766471 (17.33%) aligned discordantly 1 time
+    ----
+    8428369 pairs aligned 0 times concordantly or discordantly; of these:
+      16856738 mates make up the pairs; of these:
+        11412862 (67.71%) aligned 0 times
+        4245015 (25.18%) aligned exactly 1 time
+        1198861 (7.11%) aligned >1 times
+77.44% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B3_L1_A006.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B3_L1_A006.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B3_L1_A006/Align.out.sam
+31334968 reads; of these:
+  31334968 (100.00%) were paired; of these:
+    13964817 (44.57%) aligned concordantly 0 times
+    12671196 (40.44%) aligned concordantly exactly 1 time
+    4698955 (15.00%) aligned concordantly >1 times
+    ----
+    13964817 pairs aligned concordantly 0 times; of these:
+      3217100 (23.04%) aligned discordantly 1 time
+    ----
+    10747717 pairs aligned 0 times concordantly or discordantly; of these:
+      21495434 mates make up the pairs; of these:
+        15973210 (74.31%) aligned 0 times
+        3172035 (14.76%) aligned exactly 1 time
+        2350189 (10.93%) aligned >1 times
+74.51% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B4-1_L4_A009.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B4-1_L4_A009.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B4-1_L4_A009/Align.out.sam
+30506454 reads; of these:
+  30506454 (100.00%) were paired; of these:
+    11698112 (38.35%) aligned concordantly 0 times
+    14221328 (46.62%) aligned concordantly exactly 1 time
+    4587014 (15.04%) aligned concordantly >1 times
+    ----
+    11698112 pairs aligned concordantly 0 times; of these:
+      1759379 (15.04%) aligned discordantly 1 time
+    ----
+    9938733 pairs aligned 0 times concordantly or discordantly; of these:
+      19877466 mates make up the pairs; of these:
+        14319270 (72.04%) aligned 0 times
+        4322106 (21.74%) aligned exactly 1 time
+        1236090 (6.22%) aligned >1 times
+76.53% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B4_L2_A008.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B4_L2_A008.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B4_L2_A008/Align.out.sam
+21481479 reads; of these:
+  21481479 (100.00%) were paired; of these:
+    8655572 (40.29%) aligned concordantly 0 times
+    9662546 (44.98%) aligned concordantly exactly 1 time
+    3163361 (14.73%) aligned concordantly >1 times
+    ----
+    8655572 pairs aligned concordantly 0 times; of these:
+      1688005 (19.50%) aligned discordantly 1 time
+    ----
+    6967567 pairs aligned 0 times concordantly or discordantly; of these:
+      13935134 mates make up the pairs; of these:
+        10346901 (74.25%) aligned 0 times
+        2436702 (17.49%) aligned exactly 1 time
+        1151531 (8.26%) aligned >1 times
+75.92% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B5-1_L4_A010.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B5-1_L4_A010.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B5-1_L4_A010/Align.out.sam
+34545518 reads; of these:
+  34545518 (100.00%) were paired; of these:
+    12828803 (37.14%) aligned concordantly 0 times
+    15765622 (45.64%) aligned concordantly exactly 1 time
+    5951093 (17.23%) aligned concordantly >1 times
+    ----
+    12828803 pairs aligned concordantly 0 times; of these:
+      1800907 (14.04%) aligned discordantly 1 time
+    ----
+    11027896 pairs aligned 0 times concordantly or discordantly; of these:
+      22055792 mates make up the pairs; of these:
+        15351700 (69.60%) aligned 0 times
+        5312719 (24.09%) aligned exactly 1 time
+        1391373 (6.31%) aligned >1 times
+77.78% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B5_L2_A009.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B5_L2_A009.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B5_L2_A009/Align.out.sam
+20597975 reads; of these:
+  20597975 (100.00%) were paired; of these:
+    7821992 (37.97%) aligned concordantly 0 times
+    9271847 (45.01%) aligned concordantly exactly 1 time
+    3504136 (17.01%) aligned concordantly >1 times
+    ----
+    7821992 pairs aligned concordantly 0 times; of these:
+      1103283 (14.10%) aligned discordantly 1 time
+    ----
+    6718709 pairs aligned 0 times concordantly or discordantly; of these:
+      13437418 mates make up the pairs; of these:
+        9696220 (72.16%) aligned 0 times
+        2855106 (21.25%) aligned exactly 1 time
+        886092 (6.59%) aligned >1 times
+76.46% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B6-1_L2_A010.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B6-1_L2_A010.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B6-1_L2_A010/Align.out.sam
+36362715 reads; of these:
+  36362715 (100.00%) were paired; of these:
+    15130013 (41.61%) aligned concordantly 0 times
+    16089117 (44.25%) aligned concordantly exactly 1 time
+    5143585 (14.15%) aligned concordantly >1 times
+    ----
+    15130013 pairs aligned concordantly 0 times; of these:
+      2620208 (17.32%) aligned discordantly 1 time
+    ----
+    12509805 pairs aligned 0 times concordantly or discordantly; of these:
+      25019610 mates make up the pairs; of these:
+        17573996 (70.24%) aligned 0 times
+        5859945 (23.42%) aligned exactly 1 time
+        1585669 (6.34%) aligned >1 times
+75.84% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B6_L2_A011.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B6_L2_A011.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B6_L2_A011/Align.out.sam
+27231146 reads; of these:
+  27231146 (100.00%) were paired; of these:
+    11001876 (40.40%) aligned concordantly 0 times
+    12350057 (45.35%) aligned concordantly exactly 1 time
+    3879213 (14.25%) aligned concordantly >1 times
+    ----
+    11001876 pairs aligned concordantly 0 times; of these:
+      1725108 (15.68%) aligned discordantly 1 time
+    ----
+    9276768 pairs aligned 0 times concordantly or discordantly; of these:
+      18553536 mates make up the pairs; of these:
+        12873086 (69.38%) aligned 0 times
+        4673349 (25.19%) aligned exactly 1 time
+        1007101 (5.43%) aligned >1 times
+76.36% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B7-1_L1_A011.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B7-1_L1_A011.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B7-1_L1_A011/Align.out.sam
+24184436 reads; of these:
+  24184436 (100.00%) were paired; of these:
+    8832376 (36.52%) aligned concordantly 0 times
+    11486977 (47.50%) aligned concordantly exactly 1 time
+    3865083 (15.98%) aligned concordantly >1 times
+    ----
+    8832376 pairs aligned concordantly 0 times; of these:
+      1325477 (15.01%) aligned discordantly 1 time
+    ----
+    7506899 pairs aligned 0 times concordantly or discordantly; of these:
+      15013798 mates make up the pairs; of these:
+        10778912 (71.79%) aligned 0 times
+        3368672 (22.44%) aligned exactly 1 time
+        866214 (5.77%) aligned >1 times
+77.72% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B7_L4_A011.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B7_L4_A011.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B7_L4_A011/Align.out.sam
+28775497 reads; of these:
+  28775497 (100.00%) were paired; of these:
+    11466622 (39.85%) aligned concordantly 0 times
+    12958765 (45.03%) aligned concordantly exactly 1 time
+    4350110 (15.12%) aligned concordantly >1 times
+    ----
+    11466622 pairs aligned concordantly 0 times; of these:
+      2028731 (17.69%) aligned discordantly 1 time
+    ----
+    9437891 pairs aligned 0 times concordantly or discordantly; of these:
+      18875782 mates make up the pairs; of these:
+        13084085 (69.32%) aligned 0 times
+        4587232 (24.30%) aligned exactly 1 time
+        1204465 (6.38%) aligned >1 times
+77.27% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B8-1_L1_A012.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B8-1_L1_A012.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B8-1_L1_A012/Align.out.sam
+26745806 reads; of these:
+  26745806 (100.00%) were paired; of these:
+    11344253 (42.42%) aligned concordantly 0 times
+    11838349 (44.26%) aligned concordantly exactly 1 time
+    3563204 (13.32%) aligned concordantly >1 times
+    ----
+    11344253 pairs aligned concordantly 0 times; of these:
+      1354417 (11.94%) aligned discordantly 1 time
+    ----
+    9989836 pairs aligned 0 times concordantly or discordantly; of these:
+      19979672 mates make up the pairs; of these:
+        15482075 (77.49%) aligned 0 times
+        3685114 (18.44%) aligned exactly 1 time
+        812483 (4.07%) aligned >1 times
+71.06% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B8_L2_A012.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B8_L2_A012.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B8_L2_A012/Align.out.sam
+18884626 reads; of these:
+  18884626 (100.00%) were paired; of these:
+    7270941 (38.50%) aligned concordantly 0 times
+    8888712 (47.07%) aligned concordantly exactly 1 time
+    2724973 (14.43%) aligned concordantly >1 times
+    ----
+    7270941 pairs aligned concordantly 0 times; of these:
+      1433760 (19.72%) aligned discordantly 1 time
+    ----
+    5837181 pairs aligned 0 times concordantly or discordantly; of these:
+      11674362 mates make up the pairs; of these:
+        8573431 (73.44%) aligned 0 times
+        2189299 (18.75%) aligned exactly 1 time
+        911632 (7.81%) aligned >1 times
+77.30% overall alignment rate
+/home/ye/Software/Python/location/envs/Align/bin/bowtie2 -x /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/index/mouse/Mus_musculus  -1 /Data/zoc/weiya/201807_bulk_RNA-seq/B9-1_L1_A012.R1.clean.fastq.gz -2 /Data/zoc/weiya/201807_bulk_RNA-seq/B9-1_L1_A012.R2.clean.fastq.gz -S /home/ye/Data/Zoc/Cell/reference/data/qc/bowtie2/align/mouse/B9-1_L1_A012/Align.out.sam
+20967651 reads; of these:
+  20967651 (100.00%) were paired; of these:
+    7742853 (36.93%) aligned concordantly 0 times
+    9446861 (45.05%) aligned concordantly exactly 1 time
+    3777937 (18.02%) aligned concordantly >1 times
+    ----
+    7742853 pairs aligned concordantly 0 times; of these:
+      1257260 (16.24%) aligned discordantly 1 time
+    ----
+    6485593 pairs aligned 0 times concordantly or discordantly; of these:
+      12971186 mates make up the pairs; of these:
+        9609043 (74.08%) aligned 0 times
+        2298725 (17.72%) aligned exactly 1 time
+        1063418 (8.20%) aligned >1 times
+77.09% overall alignment rate
